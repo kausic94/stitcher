@@ -353,8 +353,8 @@ class AlignImagesRansac(object):
 
  # ----------------------------------------------------------------------------
 if __name__ == '__main__':
-    if ( len(args) < 4 ):
-        print >> sys.stderr, ("Usage: %s <image_dir> <key_frame> <output>" % args[0])
+    if ( len(sys.argv) < 4 ):
+        print >> sys.stderr, ("Usage: %s <image_dir> <key_frame> <output>" % sys.argv[0])
         sys.exit(-1)
-    AlignImagesRansac(sys.args[1:])
+    AlignImagesRansac(*sys.argv[1:])
 
